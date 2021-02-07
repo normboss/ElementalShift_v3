@@ -1,0 +1,196 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Mar 23, 2019, 9:11:45 AM
+    Author     : Norm
+*/
+
+
+@import "common";
+
+body {
+    // border: 3px solid red;
+}
+.contact-container {
+    // border: 3px solid blue;
+    box-sizing: border-box;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 100%;
+    @include max-mixin(400px) {
+        padding-left: 0%;
+        padding-right: 5px;
+    }
+    height: auto;
+    margin: 0 auto;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr;
+    @include max-mixin(900px) {
+        display: block;
+    }
+    // row-gap: 25px;
+    .box {
+        // border: 3px solid red;
+        font-family: $font-openSans;
+        // width: 90%;
+        min-width: 400px;
+        @include max-mixin(500px) {
+            min-width: 300px;
+        }
+    }
+
+    .main-copy {
+        // border: 3px solid red;
+        grid-column: 1 / span 1;
+        grid-row: 1 / span 1;
+        /*height: 300px;*/
+        font-size: 28px;
+        color: #957a2b;
+        color: $holisticRed;
+        font-family: $font-openSans; //"New Times Roman";
+        font-style: normal;
+        // padding: 20px 100px 20px 100px;
+        @include max-mixin(550px) {
+            padding-top: 0;
+            .telephone {
+                display: none;
+            }
+        }
+        width: 80%;
+        @include max-mixin(900px) {
+            // padding: 20px 50px 20px 50px;
+
+        }
+        // align-self: center;
+
+
+        h1 {
+            color: #6f2f14;
+            color: $holisticRed;
+            font-family: $font-openSans;    //"Acumin Pro Bold";
+            font-weight: 500;
+            font-style: normal;
+            @include max-mixin(1100px) {
+                font-size: 40px;
+            }
+            @include max-mixin(550px) {
+                // width: 70%;
+                // padding-left: 10px;
+                margin-top: 0;
+            }
+        }
+
+        .italic {
+            font-style: italic;
+        }
+
+        @include max-mixin(1100px) {
+            font-size: 24px;
+        }
+        @include max-mixin(550px) {
+            // width: 70%;
+            // padding-left: 10px;
+            font-size: 22px;
+            // width: 80vw;
+        }
+        grid-row-gap: 5px;
+    }
+    .image {
+        // border: 3px solid red;
+        grid-column: 2 / span 1;
+        grid-row: 1 / span 2;
+        padding-top: 50px;
+        display: flex;
+        justify-content: center;
+        @include max-mixin(900px) {
+            // display: none;
+            padding-top: 50px;
+        }
+        @include max-mixin(600px) {
+            padding-top: 0;
+            margin: 0 auto;
+        }
+        img {
+            align-self: center;
+            width: 400px;
+            width: 100%;
+            display: block;
+            max-width:400px;
+            // max-height:400px;
+            @include max-mixin(700px) {
+                max-width:300px;
+                max-height:300px;
+                }
+            // @include max-mixin(750px) {
+            //     max-width:250px;
+            //     max-height:250px;
+            //     }
+            width: auto;
+            height: auto;            
+        }
+    }
+    .info-container {
+        border: 2px solid #712d03;
+        grid-row: 2 / span 3;
+        grid-column: 1 / span 1;
+        // height: 60vh;
+        font-family: $font-openSans;
+        font-size: 20px;
+        color: #712d03;
+        padding-left: 5%;
+        padding-right: 10px;
+        @include max-mixin(500px) {
+            padding-left: 2;
+        }
+        @include max-mixin(400px) {
+            padding-left: 0;
+            border: 1px solid #712d03;
+            max-width: 300px;
+        }
+        .map {
+            // padding-left: 20%;
+            // @include max-mixin(650px) {
+            //     padding-left: 10%;
+            // }
+            // @include max-mixin(380px) {
+            //     padding-left: 5%;
+            // }
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+        }
+    }
+    .second-copy {
+        // border: 2px solid red;
+        grid-column: 2 / span 1;
+        grid-row: 4 / span 1;
+        font-family: 'Bilbo Swash Caps', cursive;
+        font-size: 55px;
+        color: #957A2B;
+        text-align: center;
+        margin: 0 auto;
+        // display: flex;
+        // flex-direction: column;
+        align-self: start;
+
+        @include max-mixin(1000px) {
+            font-size: 48px;
+        }
+        @include max-mixin(800px) {
+            font-size: 36px;
+            padding-left: 5%;
+            padding-right: 5%;
+        }
+        @include max-mixin(500px) {
+            font-size: 36px;
+            padding-left: 0;
+            padding-right: 5%;
+        }
+
+    }
+
+}

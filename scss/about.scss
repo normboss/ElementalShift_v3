@@ -1,0 +1,166 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+
+/* 
+    Created on : Mar 23, 2019, 12:26:51 AM
+    Author     : Norm
+*/
+
+@import "common";
+body {
+    width: 100%; //70%;
+    margin: 0 auto;
+}
+
+main {
+    .top-section {
+        width: 80%;
+        max-width: 1400px;
+        margin: 0 auto;
+        text-align: center;
+        column-gap: 10px;
+        @extend %green-background;
+
+        .box {
+            /*border: 3px solid red;*/
+            /*width: 400px;*/
+            height: auto;
+        }
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-areas:
+            "header3 image"
+            "paragraph1 image"
+            "header2 image"
+            "paragraph2 image";
+        @include max-mixin(900px) {
+            width: 80%;
+            margin: 0 auto;
+            text-align: center;
+            grid-template-columns: 1fr;
+            grid-template-areas:
+                "image"
+                "header3"
+                "paragraph1"
+                "header2"
+                "paragraph2";
+        }
+
+        .header3 {
+            grid-area: header3;
+            /*border: 3px red solid;*/
+            // font-family: 'Acumin Pro';
+            // font-size: 32px;
+            // color: #703015;
+            @extend %section-header;
+            align-self: start;
+            padding-bottom: 3px;
+        }
+        .paragraph1 {
+            // border: 3px red solid;
+            /*width: 1-0%;*/
+            justify-self: left;
+            grid-area: paragraph1;
+            /*border: 3px red solid;*/
+            // @extend %font-paragraph1;
+            // font-size: 24px;
+            @include section-paragraph(100%);
+            padding-bottom: 25px;
+            text-align: left;
+        }
+        .image {
+            grid-area: image;
+            img {
+                width: 20vw;
+            }
+            // border: 3px solid red;
+            align-self: center;
+        }
+        #kirsten-image {
+            clip-path: polygon(0 10%, 10% 0, 90% 0, 100% 10%, 100% 90%, 90% 100%, 10% 100%, 0 90%);
+        }
+        .header2 {
+            grid-area: header2;
+            // border: 3px red solid;
+            font-family: "Acumin Pro";
+            font-size: 36px;
+            color: #703015;
+            align-self: start;
+        }
+        .paragraph2 {
+            grid-area: paragraph2;
+            .my-experience {
+                /*border: 2px solid black;*/
+                @extend %font-paragraph1;
+                font-style: italic;
+                font-size: 22px;
+                justify-self: center;
+                text-align: left;
+            }
+            .signature {
+                /*border: 3px solid red;*/
+                @extend %font-paragraph1;
+                justify-self: end;
+                text-align: right;
+            }
+        }
+    }
+    .bottom-section {
+        // border: 3px red solid;
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+
+        .header2 {
+            // border: 3px red solid;
+            max-width: 900;
+            text-align: center;
+            font-family: "Acumin Pro";
+            font-size: 36px;
+            color: #703015;
+        }
+
+        .paragraph2 {
+            // border: 2px solid red;
+            max-width: 850px;
+            margin: 0 auto;
+            width: 100%;
+            font-size: 24px;
+            // padding-left: 150px;
+            // padding-left: 180px;
+            @include max-mixin(1175px) {
+                // padding-left: 150px;
+            }
+            @include max-mixin(960px) {
+                width: 85%;
+            }
+            @extend %font-paragraph1;
+            @include max-mixin(500px) {
+                // width: 100%;
+                font-size: 20px;
+                // padding-left: 5vw;
+            }
+            // @include max-mixin(400px) {
+            //     width: 95%;
+            // }
+        }
+
+        @include max-mixin(500px) {
+            width: 90%;
+        }
+
+        a {
+            color: blue;
+            text-decoration: none;
+        }
+    }
+
+    .appointment-block {
+        width: 80%;
+        margin: 0 auto;
+        @extend %green-background;
+    }
+}

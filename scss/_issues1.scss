@@ -1,0 +1,109 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Mar 30, 2019, 12:34:47 PM
+    Author     : Norm
+*/
+
+.header {
+    // border: 2px solid red;
+    text-align: center;
+    width: 100%;
+    // padding-left: -10%;
+    @extend %font-h7;
+    // grid-column: 1 / span 3;
+    @include max-mixin(1000px) {
+        grid-column: 1 / span 3;
+    }
+    @include max-mixin(500px) {
+        grid-column: 1 / span 2;
+    }
+    // margin-left: -10%;
+}
+
+.issues {
+    width: 80%;
+    max-width: 800px;
+    @include max-mixin(1000px) {
+        // width: 70%;
+    }
+    @include max-mixin(850px) {
+        // width: 90%;
+    }
+    @include max-mixin(700px) {
+        // width: 90%;
+    }
+    @include max-mixin(500px) {
+        width: 50%;
+    }
+    border: 1px solid brown;
+    border-radius: 20px;
+    margin: 0 auto;
+    height: auto;
+    padding-bottom: 15px;
+
+    display: grid;
+    justify-items: left;
+    grid-template-columns: repeat(3, 1fr);
+    @include max-mixin(1000px) {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    // padding-left: 10px;
+    // padding-right: 10px;
+    padding-left: 100px; //10%;
+    @include max-mixin(500px) {
+        grid-template-columns: 1fr 1fr;
+        padding-left: 0;
+    }
+
+    row-gap: 10px;
+    justify-items: left;
+    @include max-mixin(700px) {
+        justify-items: left;
+        // padding: 0;
+        padding-left: 50px;
+        width: 85%;
+    }
+    @include max-mixin(400px) {
+        width: 95%;
+        // padding-left: 0;
+    }
+
+    // .issue-group {
+    .issue {
+        // border: 2px solid red;
+        width: 100%;
+        text-align: left;
+        @extend %font-p4;
+        @include max-mixin(500px) {
+            width: 70%;
+        }
+        @include max-mixin(400px) {
+            padding-left: 0;
+        }
+        @include max-mixin(400px) {
+            grid-column: 1 / span 1;
+            text-align: left;
+            width: 100%;
+            margin-left: 0;
+            // padding-left: 25%;
+        }
+    }
+    // }
+
+    /*    .stuff {
+        display: flex;
+        justify-content: space-around;
+        ul li {
+            text-align: left;
+            @extend %font-p4;
+        }
+    }*/
+    padding-bottom: 15px;
+    @include max-mixin(500px) {
+        width: 70%;
+    }
+}

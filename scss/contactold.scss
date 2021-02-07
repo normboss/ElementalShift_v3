@@ -1,0 +1,164 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Mar 23, 2019, 9:11:45 AM
+    Author     : Norm
+*/
+
+@import "common";
+
+.contact-container {
+    /*border: 3px solid red;*/
+    width: 100%;
+    /*height: 1000px;*/
+
+    display: grid;
+    grid-template-rows: 50% 50%;
+    row-gap: 25px;
+    .box {
+        /*border: 3px solid red;*/
+        width: 90%;
+        /*height: 200px;*/
+        /*height: auto;*/
+    }
+
+    .main-copy {
+        grid-column: 1 / span 1;
+        grid-row: 1 / span 1;
+        /*height: 300px;*/
+        font-size: 28px;
+        color: #957A2B;
+        color: $holisticRed;
+        font-family: 'New Times Roman';
+            font-style: italic;
+        padding: 20px 100px 20px 100px;
+        width: 70%;
+        @include max-mixin(700px) {
+            padding: 20px 50px 20px 50px;
+        }
+        align-self: center;
+        h1 {
+            color: #6F2F14;
+            color: $holisticRed;
+            font-family: 'Acumin Pro Bold';
+            font-style: italic;
+            @include max-mixin(1100px) {
+                font-size: 40px;
+            }
+            @include max-mixin(550px) {
+                width: 90%;
+                padding-left: 10px;
+            }
+        }
+        @include max-mixin(1100px) {
+            font-size: 24px;
+        }
+        @include max-mixin(550px) {
+            width: 90%;
+            padding-left: 10px;
+        }
+    }
+    .image {
+        /*border: 3px solid red;*/
+        grid-column: 2 / span 1;
+        grid-row: 1 / span 1;
+        @include max-mixin(900px) {
+            display: none;
+        }
+        padding-top: 50px;
+        img {
+            width: 400px;
+            align-self: center;
+        }
+    }
+    .form-container {
+        grid-column: 1 / span 1;
+        grid-row: 2 / span 1;
+        width: 70%;
+        padding-left: 100px;
+        @include max-mixin(700px) {
+            padding-left: 50px;
+        }
+        @include max-mixin(550px) {
+            width: 90%;
+            padding-left: 0;
+            text-align: center;
+            justify-self: center;
+        }
+    }
+    .second-copy {
+        /*border: 3px solid red;*/
+        grid-column: 2 / span 1;
+        grid-row: 2 / span 1;
+        @extend %font-quote2;
+        @include max-mixin(900px) {
+            display: none;
+        }
+        color: #957A2B;
+        color: $holisticRed;
+        font-size: 48px;
+        text-align: center;
+        padding-top: 50px;
+    }
+    .text-area {
+        grid-column: 1 / span 2;
+        grid-row: 3 / span 1;
+    }
+
+    form.contactform {
+        width: 99%;
+        text-align: center;
+        margin: 0 auto;
+    }
+    .contactform label {
+        width: 99%;
+        text-align: left;
+        font-style: italic;
+        display: block;
+        margin-bottom: 4px;
+    }
+    .contactform input {
+        width: 99%;
+        border: 1px #ccc solid;
+        background-color: #f5f5f5;
+        padding: 5px;
+        margin-bottom: 10px;
+        color: #000000;
+    }
+    .contactform textarea {
+        width: 99%;
+        border: 1px #ccc solid;
+        background-color: #f5f5f5;
+        padding: 5px;
+        resize: none;
+        color: #000000;
+    }
+    .contactform .submit {
+        width: 100px;
+        margin: 10px 0 20px 0;
+        cursor: pointer;
+        color: #444;
+        font: 16px 'Oswald', Verdana, Helvetica, sans-serif;
+        font-weight: normal;
+        padding: 2px 18px;
+        text-decoration: none;
+        background-color: #f8f8f8;
+        background: linear-gradient(#f8f8f8, #d8d8d8);
+        border: solid 1px #d8d8d8;
+        border-radius: 5px;
+    }
+    .contactform .submit:hover {
+        text-decoration: none;
+        color: #fff;
+        background-color: #7b88c5;
+        background: linear-gradient(#7b88c5, #435299);
+        border: solid 1px #435299;
+        border-radius: 5px;
+    }
+    @include max-mixin(550px) {
+        width: 90%;
+    }
+}

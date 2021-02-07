@@ -1,0 +1,164 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : May 10, 2019, 10:11:56 AM
+    Author     : Norm
+*/
+@import "common";
+
+
+@mixin faded($offset, $blur-radius, $spread-radius)
+{
+    &.faded-left:after {
+        box-shadow: inset $offset 0 $blur-radius (-$spread-radius);
+    }
+
+    &.faded-right:after {
+        box-shadow: inset (-$offset) 0 $blur-radius (-$spread-radius);
+    }
+
+    &.faded-top:after {
+        box-shadow: inset 0 $offset $blur-radius (-$spread-radius);
+    }
+
+    &.faded-bottom:after {
+        box-shadow: inset 0 (-$offset) $blur-radius (-$spread-radius);
+    }
+
+    &.faded-left.faded-right:after {
+        box-shadow: inset $offset 0 $blur-radius (-$spread-radius), inset (-$offset) 0 $blur-radius (-$spread-radius);
+    }
+
+    &.faded-left.faded-top:after {
+        box-shadow: inset $offset ($offset) $blur-radius (-$spread-radius);
+    }
+
+    &.faded-right.faded-bottom:after {
+        box-shadow: inset (-$offset) (-$offset) $blur-radius (-$spread-radius);
+    }
+
+    &.faded-top.faded-right:after {
+        box-shadow: inset (-$offset) $offset $blur-radius (-$spread-radius);
+    }
+
+    &.faded-top.faded-bottom:after {
+        box-shadow: inset 0 $offset $blur-radius (-$spread-radius), inset 0 (-$offset) $blur-radius (-$spread-radius);
+    }
+
+    &.faded-left.faded-bottom:after {
+        box-shadow: inset $offset (-$offset) $blur-radius (-$spread-radius);
+    }
+
+    &.faded-top.faded-right.faded-bottom:after {
+        box-shadow: inset (-$offset/2) 0 $blur-radius $spread-radius;
+    }
+
+    &.faded-left.faded-right.faded-bottom:after {
+        box-shadow: inset 0 (-$offset/2) $blur-radius $spread-radius;
+    }
+
+    &.faded-left.faded-top.faded-bottom:after {
+        box-shadow: inset ($offset/2) 0 $blur-radius $spread-radius;
+    }
+
+    &.faded-left.faded-top.faded-right:after {
+        box-shadow: inset 0 ($offset/2) $blur-radius $spread-radius;
+    }
+
+    &.faded-all:after, &.faded-left.faded-top.faded-right.faded-bottom:after {
+        box-shadow: inset 0 0 $blur-radius $spread-radius;
+    }
+}
+
+
+
+
+$faded-offset: 40px !default;
+$faded-blur-radius: 40px !default;
+$faded-spread-radius: 16px !default;
+
+$faded-narrow-offset: 20px !default;
+$faded-narrow-blur-radius: 20px !default;
+$faded-narrow-spread-radius: 10px !default;
+
+$faded-wide-offset: 80px !default;
+$faded-wide-blur-radius: 80px !default;
+$faded-wide-spread-radius: 28px !default;
+
+.big-box {
+    width: 100%;
+    height: 80vh;
+    background-image: url("../images/blue_sky_clouds.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    img {
+        position: relative;
+        right: -25vw;
+        top: 8vh;
+        @include max-mixin(600px) {
+            right: 40vw;
+            top: 0vh;
+        }
+    }
+
+    .text-block {
+        // border: 3px solid red;
+        width: 300px;
+        // height: 200px;
+        
+        // background-image: url("../images/Rectangle3.png");
+        // position: relative;
+        // right: -45vw;
+        // top: -30vh;
+        // z-index: 5;
+        // font-size: 40px;
+        // /*font-size: 2.75vw;*/
+        // @include max-mixin(600px) {
+        //     font-size: 32px;
+        //     right: -5vw;
+        // }
+        // top: -30vh;
+        
+        color: #957A2B;
+        font-weight: normal;
+        text-align: center;
+        font-family: 'Open sans';
+        // box-shadow: inset  (-50px) 0 50px (-50px) white;
+        // box-shadow: 0px 0px 20px 10px white;
+        .small {
+            font-size: 22px;
+            font-weight: normal;
+        }
+    }
+    
+    .thumbnail {
+        width: 350px;
+        height: 350px;
+        background-color: white;
+        /*margin: 0 auto;*/
+        position: relative;
+        top: 32%;
+        left: 35%;
+        left: 51vw;
+        top: 40vh;
+        transform: translate( -50%, -50%);
+        /*border: 3px solid blue;*/
+        /*box-shadow: inset (-$offset) 0 $blur-radius (-$spread-radius);*/
+        box-shadow: inset  (-50px) 0 50px (-50px) white;
+        filter: blur(20px);
+
+        /*        span {
+                    color: brown;
+                    font-size: 48px;
+                    text-align: center;
+                    filter: blur(0px);)
+                }*/
+
+    }
+}
+

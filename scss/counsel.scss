@@ -1,0 +1,159 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Mar 23, 2019, 9:09:48 AM
+    Author     : Norm
+*/
+
+@import "common";
+@import "appointmentGrid";
+
+body {
+    text-align: center;
+    /*border: 3px solid red;*/
+}
+
+main {
+    width: 100%;
+    // height: 100%;
+
+    .header-image {
+        /*border: 3px solid red;*/
+        height: 80vh;
+        width: 100%;
+        position: relative;
+        // @include max-mixin(450px) {
+        //     height: 60vh;
+        // }
+
+        background-image: url("../images/header1020_copy.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        // background-position: bottom;
+        background-position-x: left;
+        background-position-y: bottom;
+        // img {
+        //     width: auto;
+        //     height: auto;
+        // }
+
+        // .image-heading {
+            // font-size: 40px;
+            // font-weight: 400;
+            // display: inline-block;
+            // @extend %font-header5;
+            // font-family: cursive;
+            // opacity: 0.8;
+            // position: absolute;
+            // top: 25%;
+            // left: 50%;
+            // transform: translateX(-50%);
+
+            // background-image: linear-gradient(to right, #ccc, #703015);
+            // -webkit-background-clip: text;
+            // color: transparent;
+            // letter-spacing: 10px;
+            // transition: all 0.2s;
+
+            h1 {
+                position: absolute;
+                font-size: 70px;
+                @include max-mixin(370px) {
+                    font-size: 55px;
+                }
+                @extend %font-header5;
+                font-weight: 400;
+                opacity: 0.3;
+                top: 25%;
+                left: 50%;
+                transform: translateX(-50%);
+                letter-spacing: 10px;
+                text-shadow: 3px 3px #888;
+            }
+        // }
+    }
+
+    .text-block {
+        // background-color: rgba(153, 204, 153, .2);
+        @extend %green-background;
+        width: 75%;
+        margin: 0 auto;
+        padding: 2% 5% 3% 5%;
+        .text {
+            text-align: left;
+            font-family: "Open Sans", sans-serif;
+            font-size: 20px;
+            color: #703015;
+            .bold {
+                font-weight: 600;
+            }
+            line-height: 25px;
+        }
+        .bold-text {
+            font-weight: 600;
+        }
+        @include max-mixin(400px) {
+            width: 90%;
+        }
+    }
+
+    .appointment-block {
+        width: 75%;
+        margin: 0 auto;
+        /*        background-color: rgba(153, 204, 153, .2);
+            box-shadow: 0px 0px 10px 20px rgba(153, 204, 153, .2);
+            border-radius: 20px;*/
+        @extend %green-background;
+    }
+
+    .joy {
+        display: block;
+        // @include max-mixin(800px) {
+        //     display: none;
+        // }
+    }
+
+    .quote2 {
+        /*Quote 2 Bilbo Swash Caps 36 pt, 48 px, 300%, #83653b*/
+        width: 70%;
+        text-align: center;
+        margin: 0 auto;
+        @extend %font-quote2;
+        line-height: 80%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        font-size: 34px;
+        line-height: 1.1;
+        word-spacing: 1;
+    }
+
+    /* ************************************************************ */
+    %section-header {
+        width: $width-hdr;
+        @extend %font-header5;
+        font-size: 30px;
+        text-align: center;
+        margin: 0 auto;
+        @include max-mixin($break-point1) {
+            width: 100%;
+            font-size: 22px;
+        }
+    }
+
+    %section-paragraph {
+        width: $width-par;
+        @extend %font-paragraph7;
+        font-size: 20px;
+        color: #712d03;
+        text-align: left;
+        margin: 0 auto;
+        @include max-mixin($break-point1) {
+            width: 90%;
+            font-size: 16px;
+        }
+        padding-bottom: 20px;
+    }
+}

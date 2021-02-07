@@ -1,0 +1,170 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : May 10, 2019, 10:11:56 AM
+    Author     : Norm
+*/
+
+
+@mixin faded($offset, $blur-radius, $spread-radius)
+{
+    &.faded-left:after {
+        box-shadow: inset $offset 0 $blur-radius (-$spread-radius);
+    }
+
+    &.faded-right:after {
+        box-shadow: inset (-$offset) 0 $blur-radius (-$spread-radius);
+    }
+
+    &.faded-top:after {
+        box-shadow: inset 0 $offset $blur-radius (-$spread-radius);
+    }
+
+    &.faded-bottom:after {
+        box-shadow: inset 0 (-$offset) $blur-radius (-$spread-radius);
+    }
+
+    &.faded-left.faded-right:after {
+        box-shadow: inset $offset 0 $blur-radius (-$spread-radius), inset (-$offset) 0 $blur-radius (-$spread-radius);
+    }
+
+    &.faded-left.faded-top:after {
+        box-shadow: inset $offset ($offset) $blur-radius (-$spread-radius);
+    }
+
+    &.faded-right.faded-bottom:after {
+        box-shadow: inset (-$offset) (-$offset) $blur-radius (-$spread-radius);
+    }
+
+    &.faded-top.faded-right:after {
+        box-shadow: inset (-$offset) $offset $blur-radius (-$spread-radius);
+    }
+
+    &.faded-top.faded-bottom:after {
+        box-shadow: inset 0 $offset $blur-radius (-$spread-radius), inset 0 (-$offset) $blur-radius (-$spread-radius);
+    }
+
+    &.faded-left.faded-bottom:after {
+        box-shadow: inset $offset (-$offset) $blur-radius (-$spread-radius);
+    }
+
+    &.faded-top.faded-right.faded-bottom:after {
+        box-shadow: inset (-$offset/2) 0 $blur-radius $spread-radius;
+    }
+
+    &.faded-left.faded-right.faded-bottom:after {
+        box-shadow: inset 0 (-$offset/2) $blur-radius $spread-radius;
+    }
+
+    &.faded-left.faded-top.faded-bottom:after {
+        box-shadow: inset ($offset/2) 0 $blur-radius $spread-radius;
+    }
+
+    &.faded-left.faded-top.faded-right:after {
+        box-shadow: inset 0 ($offset/2) $blur-radius $spread-radius;
+    }
+
+    &.faded-all:after, &.faded-left.faded-top.faded-right.faded-bottom:after {
+        box-shadow: inset 0 0 $blur-radius $spread-radius;
+    }
+}
+
+
+$faded-offset: 40px !default;
+$faded-blur-radius: 40px !default;
+$faded-spread-radius: 16px !default;
+
+$faded-narrow-offset: 20px !default;
+$faded-narrow-blur-radius: 20px !default;
+$faded-narrow-spread-radius: 10px !default;
+
+$faded-wide-offset: 80px !default;
+$faded-wide-blur-radius: 80px !default;
+$faded-wide-spread-radius: 28px !default;
+
+.big-box {
+    width: 100%;
+    height: 80vh;
+    background-image: url("../images/blue_sky_clouds.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    padding-top: 25px;
+
+    .text-block {
+        width: 300px;
+        height: 180px;
+        border-radius: 25px;
+        
+        background-color: rgba(255, 255, 255, .4);
+        background-position: center;
+        /*margin: 0 auto;*/
+        position: relative;
+        top: -1%;
+        left: 38%;
+        left: 51vw;
+        top: 39vh;
+        top: 45vh;
+        transform: translate( -50%, -190%);
+
+        z-index: 5;
+        font-size: 40px;
+        
+        color: #712D03;
+        font-weight: 600;
+        text-align: center;
+        font-family: 'Open sans';
+        box-shadow: inset  (-50px) 0 50px (-50px) white;
+        box-shadow: 0px 0px 20px 10px rgba(255, 255, 255, .5);
+    }
+    
+    .thumbnail {
+        width: 350px;
+        height: 220px;
+        background-color: rgba(255, 255, 255, .5);
+        /*margin: 0 auto;*/
+        position: relative;
+        top: 32%;
+        left: 35%;
+        left: 51vw;
+        top: 40vh;
+        transform: translate( -50%, -50%);
+        /*border: 3px solid blue;*/
+        /*box-shadow: inset (-$offset) 0 $blur-radius (-$spread-radius);*/
+        box-shadow: inset  (-50px) 0 50px (-50px) rgba(255, 255, 255, 1);
+        filter: blur(20px);
+
+
+        .faded {
+            position: relative;
+            display: inline-block;
+            color: blue;
+
+            &:after {
+                content: "";
+                position: absolute;
+                display: block;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                border-collapse: separate;
+            }
+
+            @include faded($faded-offset, $faded-blur-radius, $faded-spread-radius);
+
+            &.faded-narrow {
+                @include faded($faded-narrow-offset, $faded-narrow-blur-radius, $faded-narrow-spread-radius);
+            }
+
+            &.faded-wide {
+                @include faded($faded-wide-offset, $faded-wide-blur-radius, $faded-wide-spread-radius);
+            }
+        }
+    }
+}
+

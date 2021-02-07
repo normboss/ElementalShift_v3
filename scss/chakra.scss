@@ -1,0 +1,281 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Mar 23, 2019, 12:33:28 AM
+    Author     : Norm
+*/
+
+@import "common";
+
+.header-image {
+    /*border: 3px solid red;*/
+
+    .chakra-page {
+        /*border: 3px solid red;*/
+        text-align: center;
+        margin: 0 auto;
+        /*height: 414px;*/
+        /*height: auto;*/
+        height: 50vh;
+        /*background-image: url("../images/sky_image.png");*/
+        background-image: url("../images/blue_sky_clouds@2x.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: auto;
+        /*background-position: right;*/
+        font-size: 48px;
+        @media screen and (max-height: 550px ) {
+            font-size: 36px;
+        }
+        @media screen and (max-height: 450px ) {
+            font-size: 28px;
+        }
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        @media screen and (max-height: 550px ) {
+            justify-items: top;
+        }
+        span {
+            font-family: $font-openSans;
+            color: $holisticRed; //white; //#83653b;
+            font-size: 48px;
+            font-weight: bold;
+        }
+
+    }
+
+    padding-bottom: 25px;
+
+    $faded-offset: 40px !default;
+    $faded-blur-radius: 40px !default;
+    $faded-spread-radius: 16px !default;
+
+    $faded-narrow-offset: 20px !default;
+    $faded-narrow-blur-radius: 20px !default;
+    $faded-narrow-spread-radius: 10px !default;
+
+    .header-text {
+        z-index: 1;
+        box-sizing: border-box;
+        padding: 25px;
+        /*border: 3px solid red;*/
+        width: 30%;
+        background-color: #ffffff;
+        background-image: linear-gradient(to right, #ffffff, #ffffff);        
+        /*        opacity: 0.7;
+                border-radius: 10px;*/
+        /*filter: blur(8px);*/
+        box-shadow: inset 0 0 40px 16px;
+        border-collapse: separate;
+
+    }
+
+}
+
+main {
+
+    .upper-section {
+        border-radius: 10px;
+        padding-bottom: 20px;
+        background-color: rgba(153, 204, 153, .2);
+        box-shadow: 0px 0px 10px 20px rgba(153, 204, 153, .2);
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        width: 85%; //65%;
+        @include max-mixin(600px) {
+            width: 85%;
+        }
+        @include max-mixin(400px) {
+            width: 90%;
+        }
+
+        .chakras-header {
+            padding-top: 20px;
+            @extend %font-paragraph4;
+            @extend %font-header5;
+            font-weight: 400;
+            font-size: 32px;
+            color: #703015;
+            text-align: center;
+        }
+
+        .chakras-paragraph {
+            padding-top: 15px;
+            width: 90%;
+            .chakras-word {
+                @extend %font-paragraph1;
+                @extend %font-header5;
+                font-size: 32px;
+                font-weight: 600;
+            }
+            @extend %font-paragraph1;
+            font-size: 20px;
+            color: $holisticRed
+
+        }
+        .relaxation {
+        }
+
+    }
+
+    .lone-section {
+        padding-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        width: 85%;
+        @include max-mixin(600px) {
+            width: 85%;
+        }
+        @include max-mixin(400px) {
+            width: 95%;
+        }
+
+        .chakras-header {
+            // @extend %font-paragraph4;
+            @extend %font-header5;
+            font-size: 32px;
+            font-weight: 400;
+            color: #703015;
+            text-align: center;
+            padding-bottom: 10px;
+        }
+
+        .chakras-paragraph {
+            width: 90%;
+
+            .chakras-word {
+                // @extend %font-paragraph4;
+                @extend %font-header5;
+                font-weight: 400;
+                font-size: 32px;
+                color: #957A2B;
+            }
+            @extend %font-paragraph1;
+            font-size: 20px;
+            color: black;//$holisticRed
+            line-height: 25px;
+        }
+    }
+
+    .lower-section {
+        /*border: 2px solid red;*/
+        @extend %font-paragraph1;
+        font-size: 22px;
+        text-align: center;
+        margin: 0 auto;
+        width: 85%;
+        display: grid;
+        row-gap: 15px;
+        grid-template-columns: 1fr 3fr;
+        @include max-mixin(900px) {
+            grid-template-columns: 1fr;
+            width: 60%;
+        }
+        grid-column-gap: 25px;
+        justify-items: center;
+        @include max-mixin(700px) {
+            padding-left: 0;
+            /*justify-items: left;*/
+            width: 90%;
+        }
+
+        .mandala-image {
+            /*border: 2px solid red;*/
+            @include max-mixin(700px) {
+                padding-left: 0;
+                img {
+                    width: 70%;
+                }
+            }
+        }
+
+        .copy {
+            /*border: 2px solid red;*/
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            justify-items: left;
+            width: 100%;
+            span {
+                text-align: left;
+            }
+            font-size: 20px;
+            @include max-mixin(700px) {
+                /*padding-left: 20px;*/
+                width: 90%;
+                text-align: left;
+                font-size: 16px;
+            }
+
+            .root-chakra { color: #ff0000;font-weight: bold; }
+            .womb-chakra {color: #fb8703;font-weight: bold; }
+            .solar-plexus-chakra {color: #957a2b;font-weight: bold; }
+            .heart-chakra {color: green;font-weight: bold; }
+            .throat-chakra {color: #3a00c9; font-weight: bold;}
+            .third-eye-chakra {color: #0000ff;font-weight: bold; }
+            .crown-chakra {color: #ad00ff;font-weight: bold; }
+
+        }
+    }
+}
+
+.appointment-block {
+    width: 80%;
+    margin: 0 auto;
+    border-radius: 10px;
+    padding-bottom: 20px;
+    background-color: rgba(153, 204, 153, .2);
+    box-shadow: 0px 0px 10px 20px rgba(153, 204, 153, .2);
+}
+
+
+.unused {
+    .header-image {
+        height: 570px;
+        background-image: url("../images/sky_image1.png");
+        background-repeat: no-repeat;
+        background-size: auto;
+        @include max-mixin(1400px) {
+            background-image: url("../images/sky_image2.png");
+            background-repeat: no-repeat;
+            background-size: auto;
+        }
+        @include max-mixin(1000px) {
+            background-image: url("../images/sky_image3.png");
+            background-repeat: no-repeat;
+            background-size: auto;
+            height: 569px;
+        }
+        @include max-mixin(750px) {
+            background-image: url("../images/sky_image4a.png");
+            background-repeat: no-repeat;
+            background-size: auto;
+            height: 448px;
+        }
+        @include max-mixin(500px) {
+            background-image: url("../images/sky_image5.png");
+            background-repeat: no-repeat;
+            background-size: auto;
+            height: 504px;
+        }
+        @include max-mixin(400px) {
+            background-image: url("../images/sky_image6.png");
+            background-repeat: no-repeat;
+            background-size: auto;
+            height: 368px;
+        }
+    }
+
+}

@@ -1,0 +1,48 @@
+﻿
+Font Codes – Elemental Shift
+
+Brand - Zapifino 48 pt – 64 px, Brown Gold  
+
+Nav Bar – Open Sans 14 pt – 19 px, #000000 at 70%
+
+Page Title – Acumen Pro Wide Regular 72 pt – 96 px, Holistic Red
+Page Title + - Acumen Pro Wide 72 Regular pt – 96 px, White #ffffff
+Page Title Italic- Acumen Pro Wide Italic 72 pt – 96 px,  #ffffff 
+
+Header 1 Acumen Pro Wide Medium 48 pt -64 px, Holistic Red
+Heading 2+ Acumen Pro Wide 48 pt – 64 px, Holistic Red / Centered
+Heading 3 - Acumen Pro Wide 48  - 64 px, Regular Holistic Red  
+Heading 4 – Open Sans Bold 20 pt – 26 px, Holistic Red
+
+Sub Heading -  Acumen Pro Wide Medium 64 pt – 85 px, Brown
+Sub Heading 3 – Acumen Pro Wide Medium 48 pt, 64 px. Brown 
+Sub Heading 2 – Acumen Pro Wide Regular 20 pt – 26 px, Holistic Red  
+Click – Open Sans Regular 30 pt – 40 px, #000000 at 75%
+Click 2 – Acumen Pro Wide Light 16 pt, 22 px – Brown 100% 
+
+Body Copy 1+- Acumen Pro Wide Semi Bold 28 pt – 37 px, #000000 at 75%
+Body Copy 1 - Acumen Pro Wide Regular 24 pt – 32 px, #000000 at 75%
+Body Copy 3 -  Acumen Pro Wide Regular 24 pt -32 px, #000000 at 100%
+Body Copy 4 – Acumen Pro Wide Light 18 pt – 24 px, #000000 at 100%
+Body Copy 5 - Acumen Pro Wide Light 14 pt – 19 px, Brown
+
+Caption -Open Sans Semi-Bold 14 px – 19 px #000000 75%
+List 1-  Acumen Pro Wide Semi Bold 24 pt – 32 px , #000000 at 75%
+Bulleted List - Acumen Pro Wide Regular 24 pt, 32 px #000000 at 100%
+
+Script Red – Marydale Regular 48 pt – 64 px – Holistic Red
+
+Footer Copy – Open Sans Semi Bold 18 pt, 24 px – Brown at 75%
+Brand 2 - Zapifino Regular 34 pt – 45 px, Brown
+Credit Brand – Major Mono Display Regular, 24 pt, 32 px Brown
+Credit Name – Open Sans Bold 24 pt, 32 px Brown
+Credit Tag line – Open Sans Italic 24 pt , 32 px Brown
+
+colors
+Black 	#000000
+Brown Gold #
+Brown #
+Celadon
+Holistic Red 
+Tan #957A2B at 25%
+

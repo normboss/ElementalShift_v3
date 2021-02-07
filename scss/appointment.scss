@@ -1,0 +1,57 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Mar 30, 2019, 12:25:10 PM
+    Author     : Norm
+*/
+@import "common";
+
+
+.appointment-wide {
+    @include min-mixin(801px) {
+        display: grid;
+        flex-direction: column;
+        justify-content: center;
+        height: auto; //250px;
+        align-items: center;
+        margin: 0 auto;
+        line-height: 80%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        font-size: 36px;
+        line-height: 1.1;
+        word-spacing: 1;
+        letter-spacing: 1px;
+    }
+    @include max-mixin(800px) {
+        display: none;
+    }
+}
+
+.appointment-narrow {
+    @include max-mixin(800px) {
+    }
+    @include min-mixin(801px) {
+        display: none;
+    }    
+    display: none;
+}
+
+
+%style-quote2 {
+/*    width: 90%;
+    text-align: center;
+    margin: 0 auto;
+    @extend %font-quote2;
+    line-height: 80%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 36px;
+    line-height: 1.1;
+    word-spacing: 1;
+    letter-spacing: 1px;*/
+}
+

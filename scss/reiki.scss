@@ -1,0 +1,185 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+
+
+/* 
+    Created on : Mar 23, 2019, 9:10:44 AM
+    Author     : Norm
+*/
+
+@import "common";
+.heading {
+    font-size: 36px;
+    text-align: center;
+    .page-title-red {
+        font-family: Arial;
+        font-family: $font-openSans;
+        color: #703015;
+        font-weight: bold;
+    }
+    .page-title-light {
+        font-family: Arial;
+        font-family: $font-openSans;
+        color: #703015;
+        font-weight: normal;
+    }
+    @include max-mixin(450px) {
+        font-size: 28px;
+    }
+}
+
+
+main {
+    /*border: 3px solid black;*/
+    margin: 0 auto;
+    width: 100%;
+    @include max-mixin(650px) {
+        width: 90%;
+    }
+    @include max-mixin(400px) {
+        width: 100%;
+    }
+    /*height: auto;*/
+    display: grid;
+    /*grid-template-columns: 50% 50%;*/
+    grid-template-columns: 1fr;
+    justify-items: start;
+    column-gap: 10px;
+    /*    grid-template-areas:
+            "block1 block2"
+            "block3 block2"
+            "block5 block10"
+            "block7 block10"
+            "blcok11 block14"
+            "block15 block14"
+            ;*/
+    row-gap: 25px;
+    column-gap: 25px;
+    align-items: start;
+    @include min-mixin(800px) {
+        margin: 0 auto;
+        width: 90%;
+    }
+
+    .header-image {
+        // border: 3px solid red;
+        grid-column: 1 / span 2;
+        height: auto;
+        width: 90%;
+        margin: 0 auto;
+        text-align: center;
+        /*    img {
+                width: 100%;
+                margin: 0 auto;
+            }*/
+        width: 80vw;
+    }
+
+    .first-block {
+        @extend %font-paragraph1;
+        font-size: 20px;
+        color: $holisticRed;
+        grid-column: 1 / span 2;
+        width: 85%;
+        margin: 0 auto;
+        @include max-mixin(800px) {
+            width: 90%;
+            padding-left: 0;
+        }
+    }
+
+    .show-numbers {
+        display: none;
+    }
+
+
+    .block {
+        /*border: 3px solid red;*/
+        grid-column: 1 / span 1;
+        width: 90%;
+        margin: 0 auto;
+        /*height: auto;*/
+        /*width: 50%;*/
+        /*background-color: pink;*/
+        @extend %font-paragraph1;
+        font-size: 20px;
+        color: $holisticRed;
+
+        /*padding: 25px;*/
+        @include max-mixin(800px) {
+            width: 90%;
+        }
+        @include max-mixin(400px) {
+            width: 95%;
+        }
+        .block5, .block13 {
+            @extend %green-background;
+            /*border: 3px solid red;*/
+            /*            text-align: center;
+                        margin: 0 auto;*/
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .paragraph {
+                /*border: 3px solid red;*/
+                width: 60%;
+                padding-left: 20%;
+                @include max-mixin(800px) {
+                    width: 90%;
+                    padding-left: 0;
+                }
+                /*justify-content: center;*/
+                /*            text-align: center;
+                            margin: 0 auto;*/
+            }
+        }
+        ul.paragraph {
+            /*list-style-type: none;*/
+        }
+
+    }
+
+    .appointment-block {
+        width: 95%;
+        margin: 0 auto;
+        /*        background-color: rgba(153, 204, 153, .2);
+                box-shadow: 0px 0px 10px 20px rgba(153, 204, 153, .2);
+                border-radius: 20px;*/
+        /*@extend %green-background;*/
+        grid-gap: 20px;
+        @include max-mixin(600px) {
+            width: 90%;
+        }
+    }
+
+    .spacer20 {
+        height: 25px;
+    }
+
+}
+
+.joy {
+    display: block;
+    @include max-mixin(800px) {
+        display: none;
+    }
+}
+
+
+.quote2 {
+    /*Quote 2 Bilbo Swash Caps 36 pt, 48 px, 300%, #83653b*/
+    width: 80%;
+    text-align: center;
+    margin: 0 auto;
+    @extend %font-quote2;
+    line-height: 80%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 28px;
+    line-height: 1.1;
+    word-spacing: 1;
+}

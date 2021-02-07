@@ -1,0 +1,88 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Mar 30, 2019, 12:25:10 PM
+    Author     : Norm
+*/
+
+.appointment-wide {
+    /*border: solid 3px red;*/
+    /*        background-image: url("../images/celadon_2.png");
+            background-size: cover;*/
+    display: grid;
+    justify-content: center;
+    height: auto; //250px;
+    align-items: center;
+    padding-top: 20px;
+
+
+    .quote2 {
+        /*border: solid 3px red;*/
+        /*Quote 2 Bilbo Swash Caps 36 pt, 48 px, 300%, #83653b*/
+        width: 90%;
+        text-align: center;
+        margin: 0 auto;
+        @extend %font-quote2;
+        line-height: 80%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+
+        font-size: 36px;
+        /*            @include max-mixin(400px) {
+                        font-size: 16px;
+                    }*/
+        line-height: 1.1;
+        word-spacing: 1;
+        letter-spacing: 1px;
+    }
+    
+    .appointment-button {
+        /*border: solid 3px red;*/
+        margin: 0 auto;
+    }
+    @include max-mixin(800px) {
+        display: none;
+    }
+}
+
+.appointment-narrow {
+    /*border: solid 3px red;*/
+    /*        background-image: url("../images/celadon_2.png");
+            background-size: cover;*/
+    display: grid;
+    justify-content: center;
+    height: auto; //250px;
+    align-items: center;
+    padding-top: 20px;
+
+    .quote2 {
+        /*border: solid 3px red;*/
+        /*Quote 2 Bilbo Swash Caps 36 pt, 48 px, 300%, #83653b*/
+        width: 90%;
+        text-align: center;
+        margin: 0 auto;
+        @extend %font-quote2;
+        line-height: 80%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+
+        font-size: 24px;
+        /*            @include max-mixin(400px) {
+                        font-size: 16px;
+                    }*/
+        line-height: 1.1;
+        word-spacing: 1;
+        letter-spacing: 1px;
+    }
+    
+    .appointment-button {
+        /*border: solid 3px red;*/
+        margin: 0 auto;
+    }
+    @include min-mixin(800px) {
+        display: none;
+    }
+}
